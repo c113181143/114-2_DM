@@ -6,9 +6,9 @@
 這個錯誤表示 df.corr() 函數在計算相關性時，嘗試處理非數值的欄位，特別是 'sales' 欄位，它是一個字串型別。corr() 函數只接受數值型資料。為了解決這個問題，我們需要先從 DataFrame 中選擇出所有數值型欄位，然後再計算相關性。
 您好！該代碼已成功執行，並生成了相關性矩陣的熱圖。熱圖現在應該顯示在輸出中。
 ```
-//#sns.heatmap(df.corr().round(2), annot=True, cmap='coolwarm');
+##sns.heatmap(df.corr().round(2), annot=True, cmap='coolwarm');
 
-sns.heatmap(df.select_dtypes(include=np.number).corr().round(2), annot=True, cmap='coolwarm');
+##sns.heatmap(df.select_dtypes(include=np.number).corr().round(2), annot=True, cmap='coolwarm');
 ```
 這行程式碼 plt.plot(fpr, tpr); 是用來繪製「精確率-召回率曲線 (Precision-Recall Curve)」。
 - precision_recall_curve 函數計算了在不同門檻值（thresholds）下的精確率 (precision) 和召回率 (recall)。
